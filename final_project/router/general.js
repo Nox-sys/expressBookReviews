@@ -151,4 +151,52 @@ public_users.get('/review/:isbn',function (req, res) {
   return res.status(300).json({message: "Yet to be implemented"});
 });
 
+const myPromise1 = new Promise((resolve,reject) => {
+    resolve("Here is the list of books.");
+});
+
+myPromise1
+    .then(value => {
+        console.log(books);
+    })
+    .finally(() => {
+        console.log("Hope that helped, call Customer Service if you still have issues.")
+    })
+
+const myPromise2 = new Promise((resolve,reject) => {
+        resolve("Here is the list of books.");
+    });
+    
+myPromise2
+        .then(value => {
+            console.log(books);
+        })
+        .finally(() => {
+            console.log("Hope that helped, call Customer Service if you still have issues.")
+        })
+
+const myPromise3 = new Promise((resolve,reject) => {
+            resolve("Here is the list of books.");
+        });
+        
+myPromise3
+            .then(value => {
+                console.log(booksbyauthor);
+            })
+            .finally(() => {
+                console.log("Hope that helped, call Customer Service if you still have issues.")
+            })
+    
+const myPromise4 = new Promise((resolve,reject) => {
+    resolve("Here is the list of books.");
+});
+
+myPromise4
+    .then(value => {
+        console.log(booksbytitle);
+    })
+    .finally(() => {
+        console.log("Hope that helped, call Customer Service if you still have issues.")
+    })
+    
 module.exports.general = public_users;
